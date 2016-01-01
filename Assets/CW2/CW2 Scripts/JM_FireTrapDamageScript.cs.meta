@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4d209ddf5793d83418ad951f49878a1b
+timeCreated: 1450488429
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - mGO_Flamethrower: {instanceID: 0}
+  - mGO_PC: {fileID: 186496, guid: b467dec47a80bf249b934d829684335b, type: 2}
+  executionOrder: 700
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

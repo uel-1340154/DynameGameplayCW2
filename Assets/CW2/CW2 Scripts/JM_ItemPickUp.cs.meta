@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4375ced475a2f02468656367b34443a4
+timeCreated: 1450972597
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - PlayerChild: {instanceID: 0}
+  - mPF_ShootObject: {instanceID: 0}
+  - mGO_ShootObject: {instanceID: 0}
+  - mMB_WMScript: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

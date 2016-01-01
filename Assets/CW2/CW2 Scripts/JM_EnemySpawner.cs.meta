@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0c550a38f4a385744baddbbd12394a7b
+timeCreated: 1450648159
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - mPF_Enemy: {fileID: 122110, guid: 9325a43ae44772b49a82ea73b3c64337, type: 2}
+  - mGO_Enemy: {instanceID: 0}
+  - mGO_RoomPropertyGenerator: {instanceID: 0}
+  - mMB_RoomPropertyScript: {instanceID: 0}
+  executionOrder: 420
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

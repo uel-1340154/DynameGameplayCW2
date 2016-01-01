@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f2171dace70b703438bfa17786149003
+timeCreated: 1450486466
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - mPF_Bullet: {fileID: 177340, guid: 751adecae317e6d4fa8904ff92f7ff6d, type: 2}
+  - mGO_Bullet: {instanceID: 0}
+  executionOrder: 800
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
