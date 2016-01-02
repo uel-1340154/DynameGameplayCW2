@@ -37,8 +37,8 @@ public class JM_ShootScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Mouse0) && Parented)
         {
-            mGO_Bullet = (GameObject) Instantiate(mPF_Bullet, -1 * transform.position, transform.rotation);//instantiate bullet
-            //mGO_Bullet.GetComponent<Rigidbody>().velocity = transform.rotation * new Vector3(5,0,0);//add velocity to instantiated bullet based on rotation.
+            mGO_Bullet = (GameObject) Instantiate(mPF_Bullet, transform.position, transform.rotation);//instantiate bullet
+            mGO_Bullet.GetComponent<Rigidbody>().velocity = transform.rotation * new Vector3(0,0,-5);//add velocity to instantiated bullet based on rotation.
 
         }
         else if (Input.GetKeyDown(KeyCode.Mouse0) && !Parented)
