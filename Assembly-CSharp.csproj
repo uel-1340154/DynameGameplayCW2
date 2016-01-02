@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{6A66D128-CA7F-B4F9-EAF7-2A473FB824D6}</ProjectGuid>
+	<ProjectGuid>{68418873-6049-DAC6-749A-64557239DDAB}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -50,6 +50,18 @@
      <Compile Include="Assets\Advanced Pooling System\Demo\Scripts\HUDScript.cs" />
      <Compile Include="Assets\Advanced Pooling System\Demo\Scripts\Ship.cs" />
      <Compile Include="Assets\Advanced Pooling System\PoolingSystem.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\DG_VolumeAnimationTrigger.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_Character.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_EnemyAI.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_EnemySpawner.cs" />
@@ -66,70 +78,8 @@
      <Compile Include="Assets\CW2\CW2 Scripts\ModularWorldGenerator.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\Module.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\ModuleConnector.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
-     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorComponent.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorForce.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorGlow.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorLight.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
-     <Compile Include="Assets\Elementals\Scripts\OrbitCamera.cs" />
-     <Compile Include="Assets\Elementals\Scripts\TestParticles.cs" />
-     <Compile Include="Assets\FT_FreeSample\Script\Button.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_ActivateChildOnMultipleSwitches.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_ActivateChildrenOnMessage.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_ActivateOnSingleSwitch.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_SendMessageOnEnter.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_SpriteColourFromSwitch.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_VolumeBroadcastMessage.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_VolumeObjectToggle.cs" />
-     <Compile Include="Assets\MS6403\Scripts\2D\DG_VolumeToggleSwitch.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Animation\DG_IKGrabObject.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Animation\DG_IKLookAt.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Animation\DG_VolumeAnimationTrigger.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Audio\Footsteps_Overhead.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Camera\DG_OverheadFollowCamera.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Character\DG_BumpMovableObjects.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Character\DG_SimpleCharacterController.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Character\DG_SimpleCharacterController_Overhead.cs" />
-     <Compile Include="Assets\MS6403\Scripts\GuiHelper\DG_VolumeTextDisplay.cs" />
-     <Compile Include="Assets\MS6403\Scripts\GuiHelper\VolumeTextDisplay.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_Announcer.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_Director.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleBullet_Audio.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleBullet_Collision.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleBullet_Movement.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleBullet_Spawner.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleCharacter_Footsteps.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleEnemy_Audio.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleEnemy_Collision.cs" />
-     <Compile Include="Assets\MS6403\Scripts\OverheadShooterToys\DG_SimpleEnemy_StateMachine.cs" />
-     <Compile Include="Assets\MS6403\Scripts\PhysicsToys\DG_PhysicsToy_Base.cs" />
-     <Compile Include="Assets\MS6403\Scripts\PhysicsToys\DG_PhysicsToy_InputVolume.cs" />
-     <Compile Include="Assets\MS6403\Scripts\PhysicsToys\DG_PhysicsToy_Magnet.cs" />
-     <Compile Include="Assets\MS6403\Scripts\PhysicsToys\DG_PhysicsToy_MarbleTray.cs" />
-     <Compile Include="Assets\MS6403\Scripts\PhysicsToys\DG_PhysicsToy_ObjectToggle.cs" />
-     <Compile Include="Assets\MS6403\Scripts\PhysicsToys\DG_PhysicsToy_Slider.cs" />
-     <Compile Include="Assets\MS6403\Scripts\ShaderToys\DG_SphereMaterialControl.cs" />
-     <Compile Include="Assets\MS6403\Scripts\TrailToys\DG_TrailToy_RotateObject.cs" />
-     <Compile Include="Assets\MS6403\Scripts\TweeningToys\DG_TweeningToy_CubeAnimation.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Utility\Messenger\Callback.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Utility\Messenger\Messenger.cs" />
-     <Compile Include="Assets\MS6403\Scripts\Utility\MonoSingleton.cs" />
-     <Compile Include="Assets\MonsterLove\StateMachine\StateBehaviour.cs" />
-     <Compile Include="Assets\MonsterLove\StateMachine\StateEngine.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\MouseLook.cs" />
+     <Compile Include="Assets\CW2\CW2 Scripts\RigidbodyFirstPersonController.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Instantiation\ProBuilderInstantiate.cs" />
@@ -142,208 +92,56 @@
      <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
      <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
      <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Door.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Geometry.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Graph.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Hull.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Member.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Modules.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Portal.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_PriorityQueue.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_Sector.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_ToolTip.cs" />
-     <Compile Include="Assets\SECTR\Code\Core\Scripts\SECTR_ULong.cs" />
-     <Compile Include="Assets\SECTR\Demos\Core\Scripts\SECTR_CharacterMotor.cs" />
-     <Compile Include="Assets\SECTR\Demos\Core\Scripts\SECTR_DemoUI.cs" />
-     <Compile Include="Assets\SECTR\Demos\Core\Scripts\SECTR_FPController.cs" />
-     <Compile Include="Assets\SECTR\Demos\Core\Scripts\SECTR_FPSController.cs" />
-     <Compile Include="Assets\SECTR\Demos\Core\Scripts\SECTR_FogDisable.cs" />
-     <Compile Include="Assets\SECTR\Demos\Core\Scripts\SECTR_GhostController.cs" />
-     <Compile Include="Assets\SECTR\Demos\Core\Scripts\SECTR_Wanderer.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\EventSystemChecker.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\ReturnToMainMenu.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
-     <None Include="Assets\Demigiant\DOTween\readme.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\StandardVC.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
-     <None Include="Assets\MS6403\Shaders\Week09\SphereShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\StandardSpecularVC.shader" />
-     <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\Advanced Pooling System\Readme.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
-     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
-     <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
-     <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorLineShader.shader" />
-     <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\UnlitSolidColor.shader" />
-     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
-     <None Include="Assets\Standard Assets\Vehicles\Aircraft\AircraftGuidelines.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
-     <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
-     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
-     <None Include="Assets\voiceover-pack\Credits.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshContourShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\WaypointShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
-     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
      <None Include="Assets\RAIN\Editor\ScriptTemplates\BehaviorTreeTemplate.xml" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
-     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
      <None Include="Assets\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
-     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
-     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
-     <None Include="Assets\voiceover-pack\License.txt" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\CW2\CW2 Scripts\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\PyroParticles\Readme.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
-     <None Include="Assets\Elementals\!Readme.txt" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
-     <None Include="Assets\MS6403\Shaders\Week09\GroundShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
-     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorRingShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\UnityVC.cginc" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\RAIN\ReleaseNotes.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
-     <None Include="Assets\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
-     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
-     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
-     <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
-     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\readme.txt" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
-     <None Include="Assets\MS6403\Shaders\Week09\noise-simplex.shader" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
-     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
-     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
-     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\ProCore\ProBuilder\About\Credits.txt" />
-     <None Include="Assets\MS6403\Shaders\Week09\noiseSimplex.cginc" />
-     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
- <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="DOTween">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="DOTween43">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
- </Reference>
- <Reference Include="DOTween46">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
- </Reference>
  <Reference Include="ProBuilderCore-Unity5">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ <HintPath>C:/Users/Jack/Documents/DynameGameplayCW2/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ <HintPath>C:/Users/Jack/Documents/DynameGameplayCW2/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KDTree">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/ProCore/ProBuilder/Classes/ClassesLib/KDTree.dll</HintPath>
+ <HintPath>C:/Users/Jack/Documents/DynameGameplayCW2/Assets/ProCore/ProBuilder/Classes/ClassesLib/KDTree.dll</HintPath>
  </Reference>
  <Reference Include="RAIN">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/RAIN/RAIN.dll</HintPath>
+ <HintPath>C:/Users/Jack/Documents/DynameGameplayCW2/Assets/RAIN/RAIN.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaform">
- <HintPath>C:/Users/Jack/Documents/MS6403-2015--Core/Assets/RAIN/RAINMetaform.dll</HintPath>
+ <HintPath>C:/Users/Jack/Documents/DynameGameplayCW2/Assets/RAIN/RAINMetaform.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
@@ -351,10 +149,6 @@
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{520A57BE-46B5-6AE7-B310-AF205C80765C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
