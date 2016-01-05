@@ -66,7 +66,6 @@
      <Compile Include="Assets\CW2\CW2 Scripts\JM_EnemyAI.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_EnemySpawner.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_FireTrapDamageScript.cs" />
-     <Compile Include="Assets\CW2\CW2 Scripts\JM_Interface.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_ItemGeneration.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_ItemPickUp.cs" />
      <Compile Include="Assets\CW2\CW2 Scripts\JM_LevelManager.cs" />

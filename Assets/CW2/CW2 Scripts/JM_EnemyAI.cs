@@ -23,7 +23,7 @@ namespace Character
             MaxHealth = 50;
             CurrentHealth = MaxHealth;
             Debug.Log("My current health is: " + CurrentHealth + "HP!");
-            ExperienceValue = 100;
+            ExperienceValue = 10;
             Speed = 1;
         }
 

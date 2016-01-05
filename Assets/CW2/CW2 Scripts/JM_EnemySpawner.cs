@@ -8,6 +8,8 @@ public class JM_EnemySpawner : MonoBehaviour
 
     public int mIN_Enemylimit;
 
+    public bool Spawned;
+
     public GameObject mGO_RoomPropertyGenerator;
     public JM_RoomPropertyGeneration mMB_RoomPropertyScript;
 
@@ -20,6 +22,7 @@ public class JM_EnemySpawner : MonoBehaviour
     {
         mIN_Enemylimit = 8;
         mMB_RoomPropertyScript = mGO_RoomPropertyGenerator.GetComponent<JM_RoomPropertyGeneration>();
+        Spawned = false;
     }
 
 	// Use this for initialization
@@ -44,7 +47,14 @@ public class JM_EnemySpawner : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")//if player is in room
         {
-            SpawnEnemies();//spawn enemies
+            if(!Spawned)//if enemies for this lcoation have not yet been spawned
+            {
+                SpawnEnemies();//spawn enemies
+            }
+            else
+            {
+                //Do nothing
+            }
         }
     }
 
@@ -52,8 +62,9 @@ public class JM_EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < mIN_Enemylimit; i++)//whilst i is lower than the enemy limit
         {
-            StartCoroutine(WaitCoRoutine());//delay between enemy spawns to prevent player being overwhelmed and manage loading in game.
             mGO_Enemy = (GameObject)Instantiate(mPF_Enemy, transform.position + new Vector3((Random.Range(-5, 5)), 0.5f, (Random.Range(-4, 5))), transform.rotation);//instantiate enemy prefabs in a random range x and zco-ordinate range.
+            StartCoroutine(WaitCoRoutine());//delay between enemy spawns to prevent player being overwhelmed and manage loading in game.
         }
+        Spawned = true;
     }
 }

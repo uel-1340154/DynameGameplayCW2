@@ -54,7 +54,6 @@ public class JM_LevelManager : MonoBehaviour
             Cursor.lockState = CLM = CursorLockMode.Confined;
         }
 
-        GUI.Box(new Rect(50, 50, 150, 200), "Health: \n\n" + mMB_PCScript.CurrentHealth + "/" + mMB_PCScript.MaxHealth + "\n\n" + "Experience: \n\n" + mMB_PCScript.CurrentExperience + "/" + mMB_PCScript.ExperienceTotal + "\n\n Level: \n\n" + mMB_PCScript.Level);//simple interface elementfor player to track experience.
         //if(mMB_PCScript.LevelledUp)
         //{
             //string Perk;
