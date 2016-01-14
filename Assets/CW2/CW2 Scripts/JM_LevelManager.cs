@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using Character;
 
 public class JM_LevelManager : MonoBehaviour
@@ -10,19 +11,30 @@ public class JM_LevelManager : MonoBehaviour
     public GameObject mPF_PC;
     public JM_PCScript mMB_PCScript;
 
+    public ModularWorldGenerator mMB_LevelScript;
+
+    public Text PerkText;
+    public Button PerkButton;
+
+    public bool loaded;
+
+    public Color FadeIn;
+    public Color FadeOut;
+
     public JM_PerkGeneration mMB_PerkScript;
     public GameObject mGO_PerkGen;
 
     // Use this for initialization
     void Awake()
     {
-        LoadLevel();
+        mGO_PC = (GameObject)Instantiate(mPF_PC, new Vector3(7, 1, -8), transform.rotation);
+        mMB_LevelScript = GameObject.Find("DungeonGenerator").GetComponent<ModularWorldGenerator>();
         mMB_PCScript = mGO_PC.GetComponent<JM_PCScript>();
-        //mMB_PerkScript = mGO_PerkGen.GetComponent<JM_PerkGeneration>();
-    }
-    void Start()
-    {
-
+        mMB_PerkScript = mGO_PerkGen.GetComponent<JM_PerkGeneration>();
+        PerkButton = GameObject.FindGameObjectWithTag("PerkText").GetComponent<Button>();
+        PerkText = PerkButton.GetComponentInChildren<Text>();
+        FadeOut = PerkButton.colors.disabledColor;
+        FadeIn = new Color(200, 200, 200, 255);
     }
 
     // Update is called once per frame
@@ -38,14 +50,15 @@ public class JM_LevelManager : MonoBehaviour
         Cursor.visible = (CursorLockMode.Confined != CLM);
     }
 
-    void LoadLevel()
+    public void LoadLevel()
     {
-        mGO_PC = (GameObject)Instantiate(mPF_PC, new Vector3(7,1,-8), transform.rotation);
+        mGO_PC = (GameObject)Instantiate(mPF_PC, new Vector3(7, 1, -8), transform.rotation);
     }
 
     void OnGUI()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        bool picked = false;
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CLM = CursorLockMode.None;
         }
@@ -54,15 +67,19 @@ public class JM_LevelManager : MonoBehaviour
             Cursor.lockState = CLM = CursorLockMode.Confined;
         }
 
-        //if(mMB_PCScript.LevelledUp)
-        //{
-            //string Perk;
-            //Perk = mMB_PerkScript.PerkGeneration(mMB_PerkScript.perks);
-            //if (GUI.Button((new Rect(200, 200, 100, 60)), Perk))
-            //{
-                //mMB_PCScript.LevelledUp = false;
-                //mMB_PerkScript.picked = false;
-            //}
-        //}
-    }
+        if (mMB_PCScript.LevelledUp && !picked)
+        {
+            string Perk;
+            Perk = mMB_PerkScript.PerkGeneration(mMB_PerkScript.perks);
+            PerkText.text = Perk;
+            picked = true;
+            ColorBlock vis = PerkButton.colors;
+            vis.normalColor = Color.Lerp(FadeOut, FadeIn, 2);
+            if (mMB_PCScript.LevelledUp && picked)
+            {
+                mMB_PCScript.LevelledUp = false;
+                picked = false;
+            }
+        }
+   }
 }

@@ -12,12 +12,11 @@ namespace Character
         public int ExperienceTotal;
         public int Level;
 
+        public Rigidbody rb;
+
         public Slider Healthslider;
         public Slider ExperienceSlider;
         public Text LevelUpText;
-        public Color FadeIn;
-        public Color FadeOut;
-
 
         public bool LevelledUp;
 
@@ -32,8 +31,7 @@ namespace Character
         IEnumerator TextFadeCoroutine()
         {
             yield return new WaitForSeconds(3);
-            LevelUpText.color = Color.Lerp(FadeIn, FadeOut,3);//fade text out over time.
-
+            LevelUpText.CrossFadeAlpha(1, 5, false);
         }
 
         // Use this for initialization
@@ -41,6 +39,8 @@ namespace Character
         {
             MaxHealth = 100;
             CurrentHealth = MaxHealth;
+            rb = GetComponent<Rigidbody>();
+            rb.useGravity = false;
             Level = 1;
             ExperienceTotal = 100;
             Strength = 3;
@@ -52,8 +52,18 @@ namespace Character
             ExperienceSlider = GameObject.FindGameObjectWithTag("ExperienceBar").GetComponent<Slider>();
             ExperienceSlider.maxValue = ExperienceTotal;
             LevelUpText = GameObject.FindGameObjectWithTag("LevelUpText").GetComponent<Text>();
-            FadeOut = LevelUpText.color;
-            FadeIn = new Color(244, 255, 51, 255);
+        }
+
+        void LevelCheck()
+        {
+            if(!Physics.Raycast(transform.position, Vector3.down, 5f))
+            {
+                rb.useGravity = false;
+            }
+            else if (Physics.Raycast(transform.position, Vector3.down, 5f))
+            {
+                rb.useGravity = true;
+            }
         }
 
         new void Start()
@@ -64,12 +74,7 @@ namespace Character
         void FixedUpdate()
         {
             LevelUp(XpGained);//checks if the PC has levelled up yet
-            if(LevelledUp)
-            {
-                LevelUpText.color = Color.Lerp(FadeOut, FadeIn, 3);//fade in the Level Up Text
-                LevelledUp = false;
-                StartCoroutine(TextFadeCoroutine());
-            }
+            LevelCheck();
         }
 
         public void LevelUp(int XpGained)
@@ -81,6 +86,8 @@ namespace Character
                 Level += 1;//increase level by one
                 CurrentExperience -= ExperienceTotal;//reduce experience by total, allowing player to retain a overflow towards the next level.
                 LevelledUp = true;
+                LevelUpText.CrossFadeAlpha(255, 2.5f, false);
+                StartCoroutine(TextFadeCoroutine());
                 MaxHealth += 10;
                 CurrentHealth += 10;
                 Healthslider.maxValue = MaxHealth;

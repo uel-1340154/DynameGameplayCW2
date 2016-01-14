@@ -1,30 +1,58 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class JM_ItemPickUp : MonoBehaviour
+public class JM_ItemPickUp : JM_ItemPropertyGeneration
 {
     public Transform PlayerChild;
 
     public GameObject mPF_ShootObject;
     public GameObject mGO_ShootObject;
 
+    public Text PickUpText;
+
     public Vector3 Offset;//offset value for shootobject position depending on weapon tag.
+
+    public JM_LevelManager mLM_LevelManager;
 
     public JM_WeaponManager mMB_WMScript;
 
     public ParticleSystem[] itemParticles;
 
-
-	// Use this for initialization
-	void Start ()
+    IEnumerator TextFadeCoroutine()
     {
+        yield return new WaitForSeconds(3);
+        PickUpText.CrossFadeAlpha(1, 5, false);
+    }
+
+    // Use this for initialization
+    public void Start()
+    {
+        StatRolls = 0;          //Initialise variables to be used by child class.
+        StatMinimum = 0;
+        StatMaximum = 0;
+        ChanceofTraits = 0;
+        MinimumTraitRolls = 0;
+        MaximumTraitRolls = 0;
+        ChosenStat = new string[] { "Health", "Strength", "Dexterity", "Intelligence" };
+        TraitSlot1 = " ";
+        TraitSlot2 = " ";
+        TraitSlot3 = " ";
+        TraitSlot4 = " ";
+        PickUpText = GameObject.Find("ItemPickUpText").GetComponent<Text>();
+        mLM_LevelManager = GameObject.Find("LevelManager").GetComponent<JM_LevelManager>();
         mMB_WMScript = GameObject.Find("WeaponSlot").GetComponent<JM_WeaponManager>();
         itemParticles = new ParticleSystem[2];
-        itemParticles = GetComponentsInChildren<ParticleSystem>();       
+        itemParticles = GetComponentsInChildren<ParticleSystem>();
         CheckWeaponType();
-        mGO_ShootObject = (GameObject) Instantiate(mPF_ShootObject, transform.position + Offset, transform.rotation);//set gameobject to instantiated prefab
+        mGO_ShootObject = (GameObject)Instantiate(mPF_ShootObject, transform.position + Offset, transform.rotation);//set gameobject to instantiated prefab
         mGO_ShootObject.transform.parent = this.transform;//child prefab to object this script is attatched to.
-        RarityRoll();
+        ItemStatGeneration(RarityRoll());
+    }
+
+    public override void ItemStatGeneration(int Rarity)
+    {
+        base.ItemStatGeneration(Rarity);
     }
 
     void CheckWeaponType()//check the type of weapon to determine the appropraite offset
@@ -90,6 +118,9 @@ public class JM_ItemPickUp : MonoBehaviour
             transform.parent = PlayerChild.transform.GetChild(0);//get player grandchildand make that the parent
             transform.position = transform.parent.position; //+ new Vector3(0.2f, 0, 0.1f);//position object at parents. seems vector mathematics and velocity don't mix at all.
             transform.rotation = transform.parent.rotation;
+            PickUpText.text = "You have just acquired a " + gameObject.tag + " of " + TraitSlot1;//changes the text depending on the weapon picked up and if traited or not
+            PickUpText.CrossFadeAlpha(255, 2.5f, false);//fades in the pick up text
+            StartCoroutine(TextFadeCoroutine());//corroutine ot fade out text.
             mMB_WMScript.NewWeapon = this.gameObject;//tell the weapon script this is the new eapon
         }
     }   

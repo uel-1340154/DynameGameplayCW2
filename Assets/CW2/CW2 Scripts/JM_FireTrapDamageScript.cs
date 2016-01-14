@@ -13,7 +13,7 @@ public class JM_FireTrapDamageScript : MonoBehaviour
     protected JM_LevelManager mLM_LevelManager;
 
 	// Use this for initialization
-	void Start ()
+	public void Start()
     {
         mLM_LevelManager = GameObject.Find("LevelManager").GetComponent<JM_LevelManager>();
         mMB_PCScript = mLM_LevelManager.mGO_PC.GetComponent<JM_PCScript>();//access the first person controller
@@ -26,8 +26,7 @@ public class JM_FireTrapDamageScript : MonoBehaviour
         {
             if (col.gameObject.tag == "Player")
             {
-                mMB_PCScript.CurrentHealth -= 10;//reduce health by 10
-                Debug.Log("PC has " + mMB_PCScript.CurrentHealth + " HP left!");//debug log to check if it is working.
+                mMB_PCScript.TakeDamage(10);//reduce health by 10
             }
             if(col.gameObject.tag == "Enemy")
             {

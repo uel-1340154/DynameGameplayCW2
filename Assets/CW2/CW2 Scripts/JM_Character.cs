@@ -21,11 +21,11 @@ namespace Character//namespace to better co-ordinate all classes relating to cha
             mLM_LevelManager = GameObject.Find("LevelManager").GetComponent<JM_LevelManager>();
         }
 
-        public virtual void OnTriggerEnter(Collider col)
+        public virtual void OnTriggerEnter(Collider col)//virtual on trigger method to allow children to access
         {
-            if (col.gameObject.tag == "")
+            if (col.gameObject.tag == "")//default values
             {
-                TakeDamage(Dmg);
+                TakeDamage(Dmg);//call take Damage method.
             }
         }
 
@@ -45,11 +45,11 @@ namespace Character//namespace to better co-ordinate all classes relating to cha
         {
             get; set;
         }
-        public int CurrentHealth
+        public static int CurrentHealth
         {
             get; set;
         }
-        public int MaxHealth
+        public static int MaxHealth
         {
             get; set;
         }

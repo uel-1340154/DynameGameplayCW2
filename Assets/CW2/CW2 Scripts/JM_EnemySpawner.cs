@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class JM_EnemySpawner : MonoBehaviour
 {
     public GameObject mPF_Enemy;
-    public GameObject mGO_Enemy;
+    public GameObject mGO_Enemy; 
 
     public int mIN_Enemylimit;
 
     public bool Spawned;
+
+    public bool LockDoors;
+
+    public List<GameObject> EnemiesAlive = new List<GameObject>();
 
     public GameObject mGO_RoomPropertyGenerator;
     public JM_RoomPropertyGeneration mMB_RoomPropertyScript;
@@ -50,6 +55,7 @@ public class JM_EnemySpawner : MonoBehaviour
             if(!Spawned)//if enemies for this lcoation have not yet been spawned
             {
                 SpawnEnemies();//spawn enemies
+                LockDoors = true;
             }
             else
             {
@@ -63,8 +69,28 @@ public class JM_EnemySpawner : MonoBehaviour
         for (int i = 0; i < mIN_Enemylimit; i++)//whilst i is lower than the enemy limit
         {
             mGO_Enemy = (GameObject)Instantiate(mPF_Enemy, transform.position + new Vector3((Random.Range(-5, 5)), 0.5f, (Random.Range(-4, 5))), transform.rotation);//instantiate enemy prefabs in a random range x and zco-ordinate range.
+            mGO_Enemy.transform.parent = gameObject.transform;
+            EnemiesAlive.Add(mGO_Enemy);
             StartCoroutine(WaitCoRoutine());//delay between enemy spawns to prevent player being overwhelmed and manage loading in game.
         }
         Spawned = true;
+        DoorLockCheck();
     }
+
+    void OnTriggerStay(Collider col)
+    {
+        if(col.gameObject.tag =="Player")
+        {
+            DoorLockCheck();
+        }
+    }
+
+    void DoorLockCheck()
+    {
+        if(EnemiesAlive.Count <= 0)
+        {
+            LockDoors = false;
+        }
+    }
+
 }

@@ -11,9 +11,9 @@ public class JM_PerkGeneration : MonoBehaviour
 
     public JM_PCScript mMB_PCScript;
     public GameObject mGO_PC;
-    public bool picked;
+
 	// Use this for initialization
-	public void Start ()
+	public void Start()
     {
         mLM_LevelManager = GameObject.Find("LevelManager").GetComponent<JM_LevelManager>();
         mMB_PCScript = mLM_LevelManager.mGO_PC.GetComponent<JM_PCScript>();

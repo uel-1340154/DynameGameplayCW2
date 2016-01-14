@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0c550a38f4a385744baddbbd12394a7b
-timeCreated: 1450648159
+timeCreated: 1452215563
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -9,7 +9,7 @@ MonoImporter:
   - mGO_Enemy: {instanceID: 0}
   - mGO_RoomPropertyGenerator: {instanceID: 0}
   - mMB_RoomPropertyScript: {instanceID: 0}
-  executionOrder: 420
+  executionOrder: 5200
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

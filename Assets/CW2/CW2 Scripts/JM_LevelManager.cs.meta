@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: 15f21a70f8600ce4b98edca6efc87ea0
-timeCreated: 1450488436
+timeCreated: 1452215563
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - mGO_PC: {fileID: 186496, guid: b467dec47a80bf249b934d829684335b, type: 2}
   - mMB_PCScript: {instanceID: 0}
-  executionOrder: 400
+  executionOrder: 5000
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

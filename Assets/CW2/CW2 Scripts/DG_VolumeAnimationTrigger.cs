@@ -2,7 +2,8 @@
 using System.Collections;
 
 [RequireComponent (typeof(BoxCollider))]
-public class DG_VolumeAnimationTrigger : MonoBehaviour {
+public class DG_VolumeAnimationTrigger : MonoBehaviour
+{
 
 	public string			m_triggerTag;
 	public GameObject		m_animatingObject;
@@ -11,10 +12,17 @@ public class DG_VolumeAnimationTrigger : MonoBehaviour {
     public AudioSource Audio;
     public AudioClip[] Clips;
 
+    public Transform Parent;
+    public JM_EnemySpawner mMB_SpawnScript;
+    public Transform EnemySpawner;
+    public Transform EnemySpawnerObject;
+
 	// Use this for initialization
 	void Start ()
     {
         Audio = GetComponent<AudioSource>();
+        Parent = transform.parent;
+        mMB_SpawnScript = Parent.gameObject.GetComponentInChildren<JM_EnemySpawner>();
 	}
 
 	// Trigger the animation on enter
@@ -26,11 +34,28 @@ public class DG_VolumeAnimationTrigger : MonoBehaviour {
 
 		// Check if we're colliding with the correct tag
 		// If we are, trigger our animation
-		if (coll.CompareTag(m_triggerTag) == true) {
-			Animator  anim = m_animatingObject.GetComponent<Animator>();
-            anim.Play(m_animationOnEnter.name);
-            Audio.PlayOneShot(Clips[0]);
-		}
+        if(mMB_SpawnScript == null)
+        {
+            if (coll.CompareTag(m_triggerTag) == true)
+            {
+                Animator anim = m_animatingObject.GetComponent<Animator>();
+                anim.Play(m_animationOnEnter.name);
+                Audio.PlayOneShot(Clips[0]);
+            }
+        }
+        if(mMB_SpawnScript != null)
+        {
+            if (coll.CompareTag(m_triggerTag) == true && !mMB_SpawnScript.LockDoors)
+            {
+                Animator anim = m_animatingObject.GetComponent<Animator>();
+                anim.Play(m_animationOnEnter.name);
+                Audio.PlayOneShot(Clips[0]);
+            }
+            else if (coll.CompareTag(m_triggerTag) == true && mMB_SpawnScript.LockDoors == true)
+            {
+                //Do nothing
+            }
+        }
 	}
 
 	// Trigger the animation on exit
@@ -42,10 +67,29 @@ public class DG_VolumeAnimationTrigger : MonoBehaviour {
 
 		// Check if we're colliding with the correct tag
 		// If we are, trigger our animation
-		if (coll.CompareTag (m_triggerTag) == true) {
-            Animator anim = m_animatingObject.GetComponent<Animator>();
-            anim.Play(m_animationOnExit.name);
-            Audio.PlayOneShot(Clips[1]);
+        if(mMB_SpawnScript != null)
+        {
+            if (coll.CompareTag(m_triggerTag) == true && mMB_SpawnScript.LockDoors == false)
+            {
+                Animator anim = m_animatingObject.GetComponent<Animator>();
+                anim.Play(m_animationOnExit.name);
+                Audio.PlayOneShot(Clips[1]);
+            }
+            else if (coll.CompareTag(m_triggerTag) == true && mMB_SpawnScript.LockDoors == true)
+            {
+                Animator anim = m_animatingObject.GetComponent<Animator>();
+                anim.Play(m_animationOnExit.name);
+                Audio.PlayOneShot(Clips[1]);
+            }
+        }
+        else
+        {
+            if (coll.CompareTag(m_triggerTag) == true)
+            {
+                Animator anim = m_animatingObject.GetComponent<Animator>();
+                anim.Play(m_animationOnExit.name);
+                Audio.PlayOneShot(Clips[1]);
+            }
         }
 	}
 
