@@ -7,6 +7,7 @@ public class ModularWorldGenerator : MonoBehaviour
 {
 	public Module[] Modules;
 	public Module StartModule;
+    public Module EndModule;
 
 	public int Iterations = 8;
 
@@ -63,18 +64,32 @@ public class ModularWorldGenerator : MonoBehaviour
     //written by 1340154 on 29/12/2015
     void Smoothing(List<ModuleConnector> RemainingExits)//method with a list parameter, for the intent of smoothing the level out.
     {
-        Debug.Log("Smoothing the level out");
         var newExits = new List<ModuleConnector>();//creates a new lsit instance
+        var Tags = new List<string>();
         int ExtraIterations = 2;//should only need two iterations
         int extraiterationcount;
+        bool Finalroomadded;
+
+        Finalroomadded = false;
 
         for(extraiterationcount = 0; extraiterationcount < ExtraIterations; extraiterationcount++)
         {
             foreach (var remainingexit in RemainingExits.ToList())//ToList() function creates clone of current list that can be used in IEnumerable operations such as foreach loops.
             {
-                if (remainingexit.GetComponentInParent<Module>().Tags[0] == "Corridor")//check if the module is a corridor
+                if (remainingexit.GetComponentInParent<Module>().Tags[0] == "Corridor" && !Finalroomadded)//check if the module is a corridor
                 {
-                    var newTag = "Room1Door";//try and truncate remaining corridors by forcing them to select specific rooms
+                    //var newTag = "Room1Door"; //try and truncate remaining corridors by forcing them to select specific rooms
+                    var newModulePrefab = EndModule;
+                    var newModule = (Module)Instantiate(newModulePrefab);
+                    var newModuleExits = newModule.GetExits();
+                    var exitToMatch = newModuleExits.FirstOrDefault(x => x.IsDefault) ?? GetRandom(newModuleExits);
+                    MatchExits(remainingexit, exitToMatch);
+                    newExits.AddRange(newModuleExits.Where(e => e != exitToMatch));
+                    Finalroomadded = true;
+                }
+                else if (remainingexit.GetComponentInParent<Module>().Tags[0] == "Corridor")//check if the module is a corridor
+                {
+                    var newTag = "Room1Door"; //try and truncate remaining corridors by forcing them to select specific rooms
                     var newModulePrefab = GetRandomWithTag(Modules, newTag);
                     var newModule = (Module)Instantiate(newModulePrefab);
                     var newModuleExits = newModule.GetExits();

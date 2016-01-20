@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Character
 {
@@ -12,6 +13,8 @@ namespace Character
         public int ExperienceTotal;
         public int Level;
 
+        public static GameObject MasterPC;
+
         public Rigidbody rb;
 
         public Slider Healthslider;
@@ -19,6 +22,8 @@ namespace Character
         public Text LevelUpText;
 
         public bool LevelledUp;
+
+        public bool Dead;
 
         //stats
         public int Strength;
@@ -52,6 +57,15 @@ namespace Character
             ExperienceSlider = GameObject.FindGameObjectWithTag("ExperienceBar").GetComponent<Slider>();
             ExperienceSlider.maxValue = ExperienceTotal;
             LevelUpText = GameObject.FindGameObjectWithTag("LevelUpText").GetComponent<Text>();
+            if(MasterPC == null)
+            {
+                DontDestroyOnLoad(gameObject);
+                MasterPC = this.gameObject;
+            }
+            else if(MasterPC != this)
+            {
+                Destroy(gameObject);
+            }
         }
 
         void LevelCheck()
@@ -108,6 +122,12 @@ namespace Character
         {
             Healthslider.value = CurrentHealth;
             base.TakeDamage(Dmg);
+            if (CurrentHealth <= 0)
+            {
+                Dead = true;
+                gameObject.GetComponent<RigidbodyFirstPersonController>().enabled = false;
+                gameObject.GetComponentInChildren<AudioListener>().enabled = false;
+            }
         }
 
         public int XpGained

@@ -18,8 +18,6 @@ namespace Character
 
         public AudioSource Audio;
 
-        //public RaycastHit Ray;
-
         public float viewRadius;
         public float viewAngle;
 
@@ -113,7 +111,6 @@ namespace Character
                         transform.LookAt(target.position);//rotate towards target position
                         if (States == State.Aggressive)
                         {
-                            Debug.Log("I am currently an " + States + " Enemy");
                             transform.Translate((target.position - transform.position) * Speed * Time.deltaTime);//chase them
                             if ((target.position.x - transform.position.x) <= 0.8f)
                             {
@@ -123,7 +120,6 @@ namespace Character
                         }
                         else if (States == State.Fearful)
                         {
-                            Debug.Log("I am currently an " + States + " Enemy");
                             transform.Translate(((target.position + transform.position)/3) * Speed * Time.deltaTime);//Run away
                         }
                         else

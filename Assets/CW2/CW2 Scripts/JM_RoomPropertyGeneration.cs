@@ -12,12 +12,6 @@ public class JM_RoomPropertyGeneration : MonoBehaviour
     {
         AssignProperty();//assign property to room
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	
-	}
 
     void AssignProperty()//method ot assign properties to rooms
     {

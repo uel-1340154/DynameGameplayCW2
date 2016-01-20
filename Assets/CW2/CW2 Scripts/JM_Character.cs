@@ -32,10 +32,6 @@ namespace Character//namespace to better co-ordinate all classes relating to cha
         public virtual void TakeDamage(int Dmg)//made public and virtual for child classes to access.
         {
             CurrentHealth -= Dmg;
-            if (CurrentHealth <= 0)
-            {
-                Debug.Log("I am Dead");
-            }
         }
 
         //GETTERS AND SETTERS
@@ -45,11 +41,11 @@ namespace Character//namespace to better co-ordinate all classes relating to cha
         {
             get; set;
         }
-        public static int CurrentHealth
+        public int CurrentHealth
         {
             get; set;
         }
-        public static int MaxHealth
+        public int MaxHealth
         {
             get; set;
         }
