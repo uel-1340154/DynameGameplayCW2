@@ -116,7 +116,7 @@ public class JM_ItemPickUp : JM_ItemPropertyGeneration
         {
             PlayerChild = col.gameObject.transform.GetChild(0);//get player child
             transform.parent = PlayerChild.transform.GetChild(0);//get player grandchildand make that the parent
-            transform.position = transform.parent.position; //+ new Vector3(0.2f, 0, 0.1f);//position object at parents. seems vector mathematics and velocity don't mix at all.
+            transform.position = transform.parent.position;// + new Vector3(3, 0, 0);//position object at parents. seems vector mathematics and velocity don't mix at all.
             transform.rotation = transform.parent.rotation;
             PickUpText.text = "You have just acquired a " + gameObject.tag + " of " + TraitSlot1;//changes the text depending on the weapon picked up and if traited or not
             PickUpText.CrossFadeAlpha(255, 2.5f, false);//fades in the pick up text

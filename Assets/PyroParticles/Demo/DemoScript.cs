@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace DigitalRuby.PyroParticles
 {
@@ -60,7 +61,7 @@ namespace DigitalRuby.PyroParticles
             }
             else if (Input.GetKeyDown(KeyCode.R))
             {
-                Application.LoadLevel(Application.loadedLevel);
+                SceneManager.LoadScene(1);
             }
             else if (Input.GetKeyDown(KeyCode.O))
             {

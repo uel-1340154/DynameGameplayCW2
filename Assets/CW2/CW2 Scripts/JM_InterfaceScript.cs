@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace Character
 {
@@ -53,7 +54,7 @@ namespace Character
         public void RestartGame()
         {
             mMB_PCScript.transform.position = new Vector3(0, 0, 0);//reset PC spawn point
-            Application.LoadLevel(1);
+            SceneManager.LoadScene(1);
         }
 
         public void QuitGame()

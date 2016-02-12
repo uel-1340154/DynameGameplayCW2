@@ -1,0 +1,62 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
+    Vendor:   NVIDIA
+    VRAM:     1969 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\ProBuilderCore-Unity5.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\ProBuilderCore-Unity5.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\ProBuilderMeshOps-Unity5.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\ProBuilderMeshOps-Unity5.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\KDTree.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\KDTree.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\RAIN.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\RAIN.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\RAINMetaform.dll (this message is harmless)
+Loading C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\RAINMetaform.dll into Unity Child Domain
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.287 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Jack\Documents\DynameGameplayCW2\Cw2_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1f6c -> priority: 1 
+  Thread -> id: 1964 -> priority: 1 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 16.802896 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 275.
+Total: 0.701151 ms (FindLiveObjects: 0.046079 ms CreateObjectMapping: 0.056604 ms MarkObjects: 0.577987 ms  DeleteObjects: 0.018488 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.110465 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 275.
+Total: 0.662467 ms (FindLiveObjects: 0.048924 ms CreateObjectMapping: 0.054613 ms MarkObjects: 0.537028 ms  DeleteObjects: 0.020195 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.893435 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 275.
+Total: 0.511428 ms (FindLiveObjects: 0.039822 ms CreateObjectMapping: 0.038684 ms MarkObjects: 0.418415 ms  DeleteObjects: 0.013084 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.080598 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 275.
+Total: 0.605010 ms (FindLiveObjects: 0.043804 ms CreateObjectMapping: 0.048070 ms MarkObjects: 0.497206 ms  DeleteObjects: 0.015359 ms)
+

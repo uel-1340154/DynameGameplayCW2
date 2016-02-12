@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace Character
 {
@@ -21,7 +22,7 @@ namespace Character
                 PlayerPrefs.SetInt("MaxHealth", col.gameObject.GetComponent<JM_PCScript>().MaxHealth);//set max health to player pref
                 col.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);//reduce previous velocity to zero
                 col.gameObject.transform.position = new Vector3(8, 1, -8);//set position to initial spawn.
-                Application.LoadLevel(1);//load current scene again, as procedurally generated, laods a new layout
+                SceneManager.LoadScene(1);//load current scene again, as procedurally generated, laods a new layout
                 //mLM_LevelManager.level += 1;
             }
         }
